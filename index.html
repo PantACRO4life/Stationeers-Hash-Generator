@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Stationeers Hash Generator</title>
+    
+    <link href="css/ds-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script>
+      function enforceMinMax(el) {
+        if (el.value != "") {
+          if (parseInt(el.value) < parseInt(el.min)) {
+            el.value = el.min;
+          }
+          if (parseInt(el.value) > parseInt(el.max)) {
+            el.value = el.max;
+          }
+        }
+      }
+    </script>
+
+  </head>
+    <body>
+      <main class="form-signin w-100 m-auto">
+        <form>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="prefix" value="DEVICE-{}-">
+            <label for="prefix">Prefix</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="number" min="1" max="512" value="10" onkeyup=enforceMinMax(this) class="form-control" id="amount">
+            <label for="floatingInput">Amount (Between 1 - 512)</label>
+          </div>
+          
+          <div class="form-floating">
+            <input type="number" min="0" max="9" value="3" onkeyup=enforceMinMax(this) class="form-control" id="padding">
+            <label for="floatingInput">Padding (Between 0 - 9) [P]</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="number" min="-1000000000000000" max="1000000000000000" value="0" onkeyup=enforceMinMax(this) class="form-control" id="numid">
+            <label for="floatingInput">Unique ID (Between -/+ 1000000000000000) [UID]</label>
+          </div>
+
+          <div class="btn btn-primary w-100 py-2" onclick="main()">Calculate</div>
+          
+          <div class="form-floating">
+            <pre>
+            <label for="floatingInput" class="form-control" type="text" id="Hashing"></label>
+            </pre>
+            
+        </div>
+    </main>
+    
+    <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
