@@ -1,10 +1,11 @@
 html,
 body {
   height: 100%;
+  margin-top: -15px !important;
+  padding:0 !important;
 }
-
 .form-hashgen {
-  max-width: 1600px;
+  max-width: 1200px;
   padding: 2.5rem;
 }
 

@@ -180,4 +180,5 @@ function main() {
     }
 
     document.getElementById("Hashing").innerHTML = strlist;
+	window.scrollBy(0, 1000);
 }
