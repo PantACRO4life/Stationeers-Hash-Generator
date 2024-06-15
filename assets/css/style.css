@@ -16,8 +16,19 @@ body {
   margin-bottom: 10px;
   border-bottom-right-radius: 5;
   border-bottom-left-radius: 5;
-  border-color:rgb(47, 47, 50);
+  border-color:rgb(29 29 48);
   border-width: 0.5rem;
+}
+
+.labeltop {
+color: #9c9c9c !important;
+font-size: 2.8rem !important;
+z-index: 2 !important;
+text-align: left !important;
+margin: auto !important;
+padding-top: 5% !important;
+padding-left: 2% !important;
+
 }
 
 .form-floating label[type="text"] {
@@ -32,10 +43,13 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 5;
   border-top-right-radius: 5;
-  border-color:rgb(47, 47, 50);
+  border-color:rgb(29 29 48);
   border-width: 0.5rem;
 }
 
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(199, 80, 20, 0.712) !important;
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -106,4 +120,22 @@ body {
 }
 .bd-mode-toggle {
   z-index: 1500;
+}
+
+.btn-primary {
+    border-width: 0.5rem !important;
+  --bs-btn-color: rgb(156, 156, 156) !important;
+  --bs-btn-bg: rgb(34, 37, 41) !important;
+  --bs-btn-border-color: transparent !important;
+
+  --bs-btn-hover-color: rgb(156, 156, 156) !important;
+  --bs-btn-hover-bg: rgb(34, 37, 41) !important;
+  --bs-btn-hover-border-color: rgba(199, 80, 20, 0.712) !important;
+  --bs-btn-focus-shadow-rgb: rgba(199, 80, 20, 0.712) !important;
+  
+  --bs-btn-active-color: rgb(156, 156, 156) !important;
+  --bs-btn-active-bg: rgba(199, 80, 20, 0.712) !important;
+  --bs-btn-active-border-color: rgba(128, 53, 16, 0.712) !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgb(29, 29, 48) !important;
+  
 }
