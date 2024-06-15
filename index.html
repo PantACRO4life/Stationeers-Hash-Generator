@@ -82,7 +82,8 @@
     <main class="form-hashgen w-100 m-auto">
       <form>
         <img class="mb-4" src="assets/images/hme-title.png" alt="" width=100%>
-        <h1 class="h3 mb-3 fw-normal">Please hash some values</h1>
+        <h1 class="h1 mb-3 fw-normal">Please hash some values</h1>
+        <h1 class="h3 mb-3 fw-normal">[UID] can be used to restore your values !</h1>
 
         <div class="form-floating">
           <input type="text" class="form-control" id="prefix" value="DEVICE-{}-">
@@ -91,12 +92,12 @@
 
         <div class="form-floating">
           <input type="number" min="1" max="1024" value="10" onkeyup=enforceMinMax(this) class="form-control" id="amount">
-          <label class="labeltop" for="floatingInput">Amount (Between 1 - 1024)</label>
+          <label class="labeltop" for="floatingInput">Amount (1-1024)</label>
         </div>
         
         <div class="form-floating">
           <input type="number" min="0" max="9" value="3" onkeyup=enforceMinMax(this) class="form-control" id="padding">
-          <label class="labeltop" for="floatingInput">Padding (Between 0 - 9) [P]</label>
+          <label class="labeltop" for="floatingInput">Padding (0-9) [P]</label>
         </div>
 
         <div class="form-floating">

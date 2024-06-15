@@ -20,15 +20,40 @@ body {
   border-width: 0.5rem;
 }
 
-.labeltop {
-color: #9c9c9c !important;
-font-size: 2.8rem !important;
-z-index: 2 !important;
-text-align: left !important;
-margin: auto !important;
-padding-top: 5% !important;
-padding-left: 2% !important;
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after {
+  color: #9c9c9c !important;
+  font-size: 2.8rem !important;
+  z-index: -1 !important;
+  position: absolute !important;
+  inset: 2rem 4.375rem !important;
 
+}
+.form-floating > .form-control, .form-floating > .form-control-plaintext {
+  padding: 0.75rem .75rem !important;
+  padding-top: 8rem !important;
+  text-wrap: inherit !important;
+}
+
+.form-floating > label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  font-size: 3rem !important;
+  text-wrap:balance !important;
+  font-style: italic;
+  font-weight: 800;
+  z-index: 2;
+  height: 100%;
+  padding: 1rem 1.0rem !important;
+  display: inline-block !important;
+  overflow: hidden !important ;
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  border: var(--bs-border-width) solid transparent;
+  transform-origin: 0 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .form-floating label[type="text"] {
